@@ -7,6 +7,7 @@ AllCops:
     - pkg/**
     - bin/**
     - bundle_bin/**
+    - config/unicorn.rb
 StringLiterals:
   EnforcedStyle: single_quotes
 # Configuration parameters: AllowURI, URISchemes.
