@@ -34,10 +34,10 @@ class Comparison
 
   def execute
     url = build_url(id, from, to)
-    conn = ::Faraday.new(:url => Rails.application.secrets.raw_api_server) do |faraday|
-      faraday.request  :url_encoded             # form-encode POST params
+    conn = ::Faraday.new(url: Rails.application.secrets.raw_api_server) do |faraday|
+      faraday.request :url_encoded             # form-encode POST params
       faraday.response :logger                  # log requests to STDOUT
-      faraday.adapter  ::Faraday.default_adapter  # make requests with Net::HTTP
+      faraday.adapter ::Faraday.default_adapter  # make requests with Net::HTTP
     end
 
     response = conn.get url
