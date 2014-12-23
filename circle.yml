@@ -8,5 +8,5 @@ machine:
 deployment:
   production:
     branch: master
-      heroku:
-        appname: carrion-crow-eyes
+    heroku:
+      appname: carrion-crow-eyes
