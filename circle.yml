@@ -5,3 +5,8 @@ machine:
     RAILS_ENV: test
   node:
     version: 0.10.35
+deployment:
+  production:
+    branch: master
+      heroku:
+        appname: carrion-crow-eyes
