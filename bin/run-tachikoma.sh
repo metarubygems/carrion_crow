@@ -21,7 +21,7 @@ if [[ "${CIRCLE_BRANCH}" != "master" && "${CIRCLE_BRANCH}" =~ /^cron_for_github\
   bundle update
 
   git add Gemfile.lock
-  git commit -m "Bundle update #{HEAD_DATE}"
+  git commit -m "Bundle update ${HEAD_DATE}"
 
   # git push
   git httpsable-push origin "${HEAD}"
