@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -ev
 
-if [[ "${CIRCLE_BRANCH}" != "master" && "${CIRCLE_BRANCH}" =~ ^cron_for_github/.* ]]; then
+if [[ "${CIRCLE_BRANCH}" != "master" && "${CIRCLE_BRANCH}" =~ ^cron_for_tachikoma/.* ]]; then
   # gem prepare
   gem install --no-document git_httpsable-push pull_request-create
 
