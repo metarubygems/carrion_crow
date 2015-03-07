@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -ev
 
-if [[ "${CIRCLE_BRANCH}" != "master" && "${CIRCLE_BRANCH}" =~ ^cron_for_tachikoma/.* ]]; then
+# only sunday
+if [[ "${CIRCLE_BRANCH}" != "master" && "${CIRCLE_BRANCH}" =~ ^cron_for_tachikoma/.* && $(date +%w) -eq 0 ]]; then
   # gem prepare
   gem install --no-document git_httpsable-push pull_request-create
 
