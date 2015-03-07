@@ -5,6 +5,9 @@ machine:
     RAILS_ENV: test
   node:
     version: 0.10.35
+test:
+  post:
+    - bin/run-tachikoma.sh
 deployment:
   production:
     branch: master
