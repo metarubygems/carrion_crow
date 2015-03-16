@@ -8,6 +8,7 @@ machine:
 test:
   post:
     - bin/run-tachikoma.sh
+    - bin/run-compare-linker.sh
 deployment:
   production:
     branch: master
