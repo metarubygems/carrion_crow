@@ -177,7 +177,7 @@ DEPENDENCIES
   pg
   rack-cors
   rack-health
-  rails
+  rails (>= 4.2.0)
   rails_12factor
   sass-rails
   sdoc
