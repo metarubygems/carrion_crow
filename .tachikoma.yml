@@ -1,2 +1,1 @@
 strategy: 'bundler'
-bundler_restore_bundled_with: false
