@@ -5,9 +5,12 @@ set -ev
 if [[ "${CIRCLE_BRANCH}" != "master" ]]; then
   # gem prepare
   gem install --no-document saddler saddler-reporter-github \
-  compare_linker_wrapper text_to_checkstyle github_status_notifier
+  compare_linker_wrapper text_to_checkstyle github_status_notifier \
+  restore_bundled_with
 
   github-status-notifier notify --state pending --context saddler/compare_linker
+
+  restore-bundled-with
 
   git diff --name-only origin/master \
    | grep ".*[gG]emfile.lock$" || RETURN_CODE=$?
